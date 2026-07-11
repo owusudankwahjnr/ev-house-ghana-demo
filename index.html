@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#060913" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" id="meta-theme-color" content="#f8fafc">
+  <title>EV House - Genuine Tropicalized EV Parts & Conversions Ghana</title>
+  <meta name="description" content="EV House is Ghana's leading e-commerce platform for tropicalized electric vehicle parts, smart charging stations, solar hubs, and EV conversion kits.">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- Premium Announcement Notice Bar -->
+  <div class="utility-banner" id="announcement-bar">
+    <div class="live-indicator">
+      <div class="live-dot"></div>
+      <span>LIVE STATUS: Regional Delivery Dispatch Operating Normal</span>
+    </div>
+    <span style="color:var(--color-border);">|</span>
+    <span>Free Express Delivery on orders above <strong>GH₵ 10,000</strong></span>
+  </div>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-bg-deep);"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M13 18h.01"/><path d="m10 10 3-3v6l3-3"/></svg>
+        </div>
+        <span>EV House</span>
+      </a>
+      <div class="header-search">
+        <input type="text" id="header-search-input" placeholder="Search genuine EV parts (e.g. battery, charger)...">
+        <button id="header-search-btn" title="Search catalog">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+      <div class="nav-right">
+        <nav class="desktop-nav" id="main-nav">
+          <ul class="nav-links">
+            <li><a href="index.html" class="active" id="nav-home">Home</a></li>
+            <li><a href="catalog.html" id="nav-catalog">Browse Parts</a></li>
+            <li><a href="checkout-story.html" id="nav-checkout">Checkout Story</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="checkout-story.html" class="nav-cart-btn" id="nav-cart-trigger" aria-label="View Cart">
+            <div class="cart-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+              <span class="nav-cart-badge" id="nav-cart-count">0</span>
+            </div>
+          </a>
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Width Promo Campaigns Slideshow Slider -->
+  <section class="promo-section" style="background: var(--color-bg-deep); border-bottom: 1px solid var(--color-border); padding: 0;">
+    <div class="promo-slider">
+      <!-- Slide 1 -->
+      <div class="promo-slide active" style="background-image: url('images/product_battery_1783794876013.jpg');">
+        <div class="container" style="position: relative; z-index: 2; width: 100%;">
+          <div class="promo-content">
+            <span class="badge badge-eco" style="margin-bottom:1rem;">Featured Promotion</span>
+            <h2 class="promo-title">TRACTION BATTERY <span>UPGRADE PROMOTION</span></h2>
+            <p class="promo-desc">Trade in your old Nissan Leaf battery for a brand-new tropicalized 40kWh LFP pack and get up to GH₵ 5,000 credit! Local bay diagnostics included.</p>
+            <a href="catalog.html?category=batteries" class="btn btn-primary">Trade-In Spares</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="promo-slide" style="background-image: url('images/product_solar_1783794910248.jpg');">
+        <div class="container" style="position: relative; z-index: 2; width: 100%;">
+          <div class="promo-content">
+            <span class="badge badge-gold" style="margin-bottom:1rem;">Solar Charging</span>
+            <h2 class="promo-title">GO OFF-GRID <span>WITH SOLAR POWER</span></h2>
+            <p class="promo-desc">Direct-charge your EV drivetrain from solar roof cells. Combine our 5kW MPPT hybrid inverter with solar arrays for zero fuel bills.</p>
+            <a href="catalog.html?category=solar" class="btn btn-primary">Shop Inverters</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="promo-slide" style="background-image: url('images/product_motor_1783794902321.jpg');">
+        <div class="container" style="position: relative; z-index: 2; width: 100%;">
+          <div class="promo-content">
+            <span class="badge badge-eco" style="margin-bottom:1rem;">Retrofit Spares</span>
+            <h2 class="promo-title">COMPLETE <span>EV CONVERSION KITS</span></h2>
+            <p class="promo-desc">Convert standard combustion sedans or tricycles. High-torque BLDC motors & custom mapped controller ECUs calibrated for Greater Accra.</p>
+            <a href="catalog.html?category=conversion" class="btn btn-primary">Shop Conversion Spares</a>
+          </div>
+        </div>
+      </div>
+      <!-- Dots -->
+      <div class="slider-dots">
+        <span class="slider-dot active"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-commerce Reassurance Value Pillars Bar -->
+  <div class="features-bar-container">
+    <div class="features-bar">
+      <div class="bar-item">
+        <span class="bar-bullet">✓</span>
+        <span>Fitment Guarantee Certified</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-bullet">✓</span>
+        <span>Tropicalized (Heat-Shielded)</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-bullet">✓</span>
+        <span>24hr Motorbike GPS Dispatch</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-bullet">✓</span>
+        <span>Secure MoMo & Card Checkouts</span>
+      </div>
+    </div>
+  </div>
+  <!-- Manufacturer Partner Brands Row (CompuGhana style) -->
+  <section class="brands-section">
+    <div class="brands-carousel-container">
+      <div class="brands-carousel-track">
+        <!-- Group 1 -->
+        <div class="brands-group">
+          <img src="images/brand-nissan.png" alt="Nissan" class="brand-logo-img">
+          <img src="images/brand-hyundai.png" alt="Hyundai" class="brand-logo-img">
+          <img src="images/brand-byd.png" alt="BYD" class="brand-logo-img">
+          <img src="images/brand-tesla.png" alt="Tesla" class="brand-logo-img">
+          <img src="images/brand-vw.png" alt="Volkswagen" class="brand-logo-img">
+          <img src="images/brand-mg.png" alt="MG" class="brand-logo-img">
+          <img src="images/brand-xpeng.png" alt="XPeng" class="brand-logo-img">
+          <img src="images/brand-nio.png" alt="NIO" class="brand-logo-img">
+          <img src="images/brand-geely.png" alt="Geely" class="brand-logo-img">
+          <img src="images/brand-changan.png" alt="Changan" class="brand-logo-img">
+        </div>
+        <!-- Group 2 -->
+        <div class="brands-group" aria-hidden="true">
+          <img src="images/brand-nissan.png" alt="Nissan" class="brand-logo-img">
+          <img src="images/brand-hyundai.png" alt="Hyundai" class="brand-logo-img">
+          <img src="images/brand-byd.png" alt="BYD" class="brand-logo-img">
+          <img src="images/brand-tesla.png" alt="Tesla" class="brand-logo-img">
+          <img src="images/brand-vw.png" alt="Volkswagen" class="brand-logo-img">
+          <img src="images/brand-mg.png" alt="MG" class="brand-logo-img">
+          <img src="images/brand-xpeng.png" alt="XPeng" class="brand-logo-img">
+          <img src="images/brand-nio.png" alt="NIO" class="brand-logo-img">
+          <img src="images/brand-geely.png" alt="Geely" class="brand-logo-img">
+          <img src="images/brand-changan.png" alt="Changan" class="brand-logo-img">
+        </div>
+        <!-- Group 3 -->
+        <div class="brands-group" aria-hidden="true">
+          <img src="images/brand-nissan.png" alt="Nissan" class="brand-logo-img">
+          <img src="images/brand-hyundai.png" alt="Hyundai" class="brand-logo-img">
+          <img src="images/brand-byd.png" alt="BYD" class="brand-logo-img">
+          <img src="images/brand-tesla.png" alt="Tesla" class="brand-logo-img">
+          <img src="images/brand-vw.png" alt="Volkswagen" class="brand-logo-img">
+          <img src="images/brand-mg.png" alt="MG" class="brand-logo-img">
+          <img src="images/brand-xpeng.png" alt="XPeng" class="brand-logo-img">
+          <img src="images/brand-nio.png" alt="NIO" class="brand-logo-img">
+          <img src="images/brand-geely.png" alt="Geely" class="brand-logo-img">
+          <img src="images/brand-changan.png" alt="Changan" class="brand-logo-img">
+        </div>
+        <!-- Group 4 -->
+        <div class="brands-group" aria-hidden="true">
+          <img src="images/brand-nissan.png" alt="Nissan" class="brand-logo-img">
+          <img src="images/brand-hyundai.png" alt="Hyundai" class="brand-logo-img">
+          <img src="images/brand-byd.png" alt="BYD" class="brand-logo-img">
+          <img src="images/brand-tesla.png" alt="Tesla" class="brand-logo-img">
+          <img src="images/brand-vw.png" alt="Volkswagen" class="brand-logo-img">
+          <img src="images/brand-mg.png" alt="MG" class="brand-logo-img">
+          <img src="images/brand-xpeng.png" alt="XPeng" class="brand-logo-img">
+          <img src="images/brand-nio.png" alt="NIO" class="brand-logo-img">
+          <img src="images/brand-geely.png" alt="Geely" class="brand-logo-img">
+          <img src="images/brand-changan.png" alt="Changan" class="brand-logo-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vehicle Matcher Widget (Overlapped) -->
+  <div class="matcher-container">
+    <div class="matcher-card" id="vehicle-matcher-card">
+      <form class="matcher-form" id="vehicle-matcher-form">
+        <div class="form-group">
+          <label for="matcher-vehicle">Vehicle Model</label>
+          <select class="form-select" id="matcher-vehicle" required>
+            <option value="all">Any EV / General Spares</option>
+            <option value="Nissan Leaf">Nissan Leaf (ZE0/AZE0)</option>
+            <option value="BYD Atto 3">BYD Atto 3</option>
+            <option value="Electric Tricycle">Electric Tricycle (Aboboyaa)</option>
+            <option value="Hyundai Kona">Hyundai Kona EV</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="matcher-category">Parts Category</label>
+          <select class="form-select" id="matcher-category">
+            <option value="all">All Product Categories</option>
+            <option value="batteries">Tropicalized Batteries</option>
+            <option value="chargers">Grid-Surge Protected Chargers</option>
+            <option value="suspension">Pothole-Reinforced Suspension</option>
+            <option value="solar">Solar EV charging controllers</option>
+            <option value="conversion">Conversion Kits</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" id="btn-matcher-find" style="width: 100%; height: 48px;">
+          Find Parts
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Trending EV Parts Categories Visual Grid -->
+  <section style="background: var(--color-bg-deep); padding: 5rem 0 3rem 0; border-bottom: 1px solid var(--color-border);">
+    <div style="text-align: center; margin-bottom: 1.25rem; padding: 0 2rem;">
+      <span class="badge badge-eco" style="margin-bottom: 0.5rem;">Marketplace Inventory</span>
+      <h2 style="font-size: 2rem; text-transform: uppercase;">Shop EV Parts by Category</h2>
+      <p style="color: var(--color-text-slate); max-width: 600px; margin: 0.5rem auto 0 auto;">Select a category to view high-quality tropicalized spares and conversion kits.</p>
+    </div>
+    
+    <div class="category-grid">
+      <div class="category-card" onclick="window.location.href='catalog.html?category=batteries'">
+        <img class="category-card-img" src="images/product_battery_1783794876013.jpg" alt="Traction Batteries">
+        <div class="category-card-content">
+          <h4 class="category-card-title">Traction Batteries</h4>
+          <span class="category-card-desc">Heat-Shielded LiFePO4 Packs</span>
+        </div>
+      </div>
+      <div class="category-card" onclick="window.location.href='catalog.html?category=chargers'">
+        <img class="category-card-img" src="images/product_charger_1783794883988.jpg" alt="Charging Stations">
+        <div class="category-card-content">
+          <h4 class="category-card-title">Charging Infrastructure</h4>
+          <span class="category-card-desc">Grid-Surge Safe Wallboxes</span>
+        </div>
+      </div>
+      <div class="category-card" onclick="window.location.href='catalog.html?category=conversion'">
+        <img class="category-card-img" src="images/product_motor_1783794902321.jpg" alt="Conversion Kits">
+        <div class="category-card-content">
+          <h4 class="category-card-title">Conversion Kits</h4>
+          <span class="category-card-desc">BLDC Motors & Controller Maps</span>
+        </div>
+      </div>
+      <div class="category-card" onclick="window.location.href='catalog.html?category=suspension'">
+        <img class="category-card-img" src="images/product_suspension_1783794894109.jpg" alt="Reinforced Suspension">
+        <div class="category-card-content">
+          <h4 class="category-card-title">Reinforced Spares</h4>
+          <span class="category-card-desc">Heavy Coil Springs & Accessories</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Offers Promotion (Countdown timer & Stock bars) -->
+  <section style="background: var(--color-bg-deep); padding: 5rem 0; border-bottom: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="section-header" style="border-bottom:none; margin-bottom: 3rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div class="section-title">
+          <span class="badge badge-gold" style="margin-bottom: 0.5rem;">Special Offers</span>
+          <h2 style="text-transform:uppercase; font-size:2.2rem; display:flex; align-items:center; gap:0.5rem;">
+            ⚡ Deal of the Week
+          </h2>
+          <p>Limited stock on essential EV parts. Grab these discounts before they sell out.</p>
+        </div>
+        <div style="background: var(--color-bg-card); border: 1.5px solid var(--color-border); padding: 0.75rem 1.5rem; border-radius: var(--radius-sm); display:flex; align-items:center; gap:0.75rem;">
+          <span style="font-size:0.75rem; font-weight:800; color:var(--color-text-slate); text-transform:uppercase; letter-spacing:0.05em;">Sale ends in:</span>
+          <strong id="flash-timer" style="font-family:var(--font-heading); font-size:1.25rem; color:var(--color-primary-neon); text-shadow:0 0 10px rgba(5,255,133,0.15); letter-spacing:0.05em;">04:12:35</strong>
+        </div>
+      </div>
+      
+      <div class="flash-deals-container">
+        <!-- Deal 1 -->
+        <div class="flash-deal-card" data-id="nissan-leaf-battery">
+          <div class="flash-img-wrapper">
+            <img src="images/product_battery_1783794876013.jpg" alt="Nissan Leaf pack">
+          </div>
+          <div class="flash-info">
+            <div class="flash-tag-row">
+              <span class="compat-tag">Nissan Leaf</span>
+              <span class="flash-discount-badge">Save 10%</span>
+            </div>
+            <h3 class="flash-name">Nissan Leaf 40kWh Replacement Battery</h3>
+            <div class="flash-price-row">
+              <span class="flash-price-now">GH₵ 52,000</span>
+              <span class="flash-price-was">GH₵ 58,000</span>
+            </div>
+            <div class="flash-stock-info">
+              <div class="flash-stock-label">
+                <span>Sold: 4/6</span>
+                <span style="color: #ef4444; font-weight: 800;">Only 2 Left!</span>
+              </div>
+              <div class="progress-bar-stock">
+                <div class="progress-bar-fill" style="width: 66%;"></div>
+              </div>
+            </div>
+            <button class="btn btn-primary add-to-cart-btn" data-id="nissan-leaf-battery" style="width: 100%;">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Deal 2 -->
+        <div class="flash-deal-card" data-id="wallbox-charger-7kw">
+          <div class="flash-img-wrapper">
+            <img src="images/product_charger_1783794883988.jpg" alt="Wallbox EV charger">
+          </div>
+          <div class="flash-info">
+            <div class="flash-tag-row">
+              <span class="compat-tag">Universal Parts</span>
+              <span class="flash-discount-badge">Save 13%</span>
+            </div>
+            <h3 class="flash-name">7kW Home EV Charger with Surge Protection</h3>
+            <div class="flash-price-row">
+              <span class="flash-price-now">GH₵ 6,800</span>
+              <span class="flash-price-was">GH₵ 7,800</span>
+            </div>
+            <div class="flash-stock-info">
+              <div class="flash-stock-label">
+                <span>Sold: 38/50</span>
+                <span style="color: var(--color-primary-neon); font-weight: 800;">In Stock</span>
+              </div>
+              <div class="progress-bar-stock">
+                <div class="progress-bar-fill" style="width: 76%;"></div>
+              </div>
+            </div>
+            <button class="btn btn-primary add-to-cart-btn" data-id="wallbox-charger-7kw" style="width: 100%;">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Featured Grid Section -->
+  <section class="featured-section" id="featured-products">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title">
+          <span class="badge badge-eco" style="margin-bottom: 0.5rem;">Fulfillment Hub Spares</span>
+          <h2>Featured Tropicalized Parts</h2>
+          <p>Engineered to withstand extreme ambient temperatures and rough road conditions.</p>
+        </div>
+        <a href="catalog.html" class="btn btn-secondary" id="featured-see-all" style="padding: 0.65rem 1.25rem;">
+          See All Parts
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      
+      <!-- Category Tabs (CompuGhana style) -->
+      <div class="tab-bar-container">
+        <button class="tab-btn active" data-category="all">All Spares</button>
+        <button class="tab-btn" data-category="batteries">Batteries</button>
+        <button class="tab-btn" data-category="chargers">Chargers</button>
+        <button class="tab-btn" data-category="suspension">Suspension</button>
+        <button class="tab-btn" data-category="solar">Solar controllers</button>
+        <button class="tab-btn" data-category="conversion">Conversion kits</button>
+      </div>
+      
+      <!-- Rendered Dynamically via app.js -->
+      <div class="products-grid" id="featured-products-grid">
+        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+          <p style="color: var(--color-text-slate);">Loading featured catalog items...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges Bar -->
+  <section style="background: var(--color-bg-deep); border-bottom: 1px solid var(--color-border);">
+    <div class="trust-badges-bar" id="footer-trust-badges">
+      <div class="trust-badge-item">
+        <div class="trust-badge-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="trust-badge-text">
+          <h5>ECU & Grid Protected</h5>
+          <p>Built-in voltage & lightning protection</p>
+        </div>
+      </div>
+      <div class="trust-badge-item">
+        <div class="trust-badge-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="trust-badge-text">
+          <h5>Express Dispatch</h5>
+          <p>24-hour motorbike delivery across regions</p>
+        </div>
+      </div>
+      <div class="trust-badge-item">
+        <div class="trust-badge-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="trust-badge-text">
+          <h5>Local Fitment Centers</h5>
+          <p>Fulfillment hubs in Accra & Kumasi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="global-footer">
+    <div class="footer-newsletter-section">
+      <div class="newsletter-text">
+        <h3>Sign up for EV House Updates</h3>
+        <p>Get the latest news on tropicalized parts, exclusive deals, and EV tips.</p>
+      </div>
+      <div class="newsletter-input-group">
+        <input type="email" placeholder="Enter your email address">
+        <button class="btn btn-primary">Subscribe</button>
+      </div>
+    </div>
+    
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>EV House</h3>
+        <p>Premium eco-friendly automotive technologies engineered for Ghanaian climates. Powering the sustainable transport transition.</p>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+233 (0) 55 123 4567</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>support@evhouse.com.gh</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Spintex Road, Next to Ecobank, Accra</span>
+          </div>
+        </div>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-links-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="catalog.html">Battery Packs</a></li>
+          <li><a href="catalog.html">Surge Wallboxes</a></li>
+          <li><a href="catalog.html">Reinforced Coils</a></li>
+          <li><a href="catalog.html">Solar Charging Inverters</a></li>
+          <li><a href="catalog.html">Conversion Kits</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Fitment Guides</a></li>
+          <li><a href="#">Warranty Registry</a></li>
+          <li><a href="#">Fulfillment Hubs</a></li>
+          <li><a href="#">Accra Repair Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>Regions</h4>
+        <ul>
+          <li><a href="#">Greater Accra Hub</a></li>
+          <li><a href="#">Ashanti Hub (Kumasi)</a></li>
+          <li><a href="#">Western Hub (Takoradi)</a></li>
+          <li><a href="#">Northern Hub (Tamale)</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <p>© 2026 EV House Ghana. All rights reserved. Made for Ghanaian mobility.</p>
+      </div>
+      <div class="footer-payments">
+        <span style="font-size: 0.8rem; font-weight: 700; margin-right: 0.5rem;">Secure Checkout:</span>
+        <svg class="payment-icon" viewBox="0 0 38 24" width="38" height="24"><rect width="38" height="24" rx="3" fill="#1A1F26"/><path d="M14.5 15.5l1.5-6h2l-1.5 6h-2zM21.5 10c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-3zm-1.5 3h-2v-3h2v3zM27 9.5l-1.5 6h-2l1.5-6h2z" fill="#FFF"/></svg>
+        <svg class="payment-icon" viewBox="0 0 38 24" width="38" height="24"><rect width="38" height="24" rx="3" fill="#1A1F26"/><circle cx="15" cy="12" r="5" fill="#EB001B"/><circle cx="23" cy="12" r="5" fill="#F79E1B"/></svg>
+        <svg class="payment-icon" viewBox="0 0 38 24" width="38" height="24"><rect width="38" height="24" rx="3" fill="#FCCA00"/><circle cx="19" cy="12" r="6" fill="#000"/><path d="M19 14l-2-4h4l-2 4z" fill="#FCCA00"/></svg>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script references -->
+  <script src="js/app.js"></script>
+</body>
+</html>
