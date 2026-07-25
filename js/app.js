@@ -377,7 +377,7 @@ function createProductCardHtml(product) {
       </div>
       <h3 class="product-name">${product.name}</h3>
       
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+      <div class="rating-stock-row" style="margin-bottom: 1.25rem;">
         <div class="product-rating" style="margin-bottom:0;">
           <div style="display:flex; align-items:center; margin-right:0.25rem;">
             ${getRatingStarsSvg(product.rating)}
@@ -391,11 +391,11 @@ function createProductCardHtml(product) {
       
       <div style="margin-top:auto; padding-top:1.15rem; border-top:1px solid var(--color-border);">
         ${product.freeFixing ? 
-          `<div style="background: rgba(5, 255, 133, 0.1); color: var(--color-primary-neon); border: 1px solid rgba(5,255,133,0.3); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.75rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+          `<div class="free-fixing-badge">
              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
              Free Fixing Included
            </div>` : ''}
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+        <div class="price-row" style="margin-bottom:1rem;">
           <span style="font-size:0.75rem; font-weight:800; color:var(--color-text-slate); text-transform:uppercase; letter-spacing:0.05em;">Price</span>
           ${product.requiresQuote 
             ? `<div class="product-price" style="font-size:1.1rem; color:var(--color-accent-gold);">Request for Price</div>` 

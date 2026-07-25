@@ -804,8 +804,37 @@ a.nav-cart-btn:hover {
   .products-grid:not(.list-view) .btn-quick-view {
     display: none; /* Hide quick view button to save space for add to cart */
   }
+  
+  /* Stack the rating/stock row on very small screens */
+  .products-grid:not(.list-view) .rating-stock-row {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
+  
+  /* Stack the price row so 'Request for Price' doesn't squish */
+  .products-grid:not(.list-view) .price-row {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.15rem;
+  }
+  
+  /* Shrink the free fixing badge heavily for mobile */
+  .products-grid:not(.list-view) .free-fixing-badge {
+    font-size: 0.5rem !important;
+    padding: 0.15rem 0.35rem !important;
+    margin-bottom: 0.5rem !important;
+    white-space: normal;
+    text-align: left;
+    line-height: 1.1;
+  }
+  .products-grid:not(.list-view) .free-fixing-badge svg {
+    width: 8px !important;
+    height: 8px !important;
+  }
+  
   .products-grid:not(.list-view) .product-rating {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
   .products-grid:not(.list-view) .badge {
     font-size: 0.55rem;
@@ -938,6 +967,33 @@ a.nav-cart-btn:hover {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.rating-stock-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.free-fixing-badge {
+  background: rgba(5, 255, 133, 0.1);
+  color: var(--color-primary-neon);
+  border: 1px solid rgba(5,255,133,0.3);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .product-compatibilities {
