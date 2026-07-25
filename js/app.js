@@ -4,6 +4,7 @@
 const PRODUCTS = [
   {
     id: "tropical-battery-pack",
+    requiresQuote: true,
     name: "72V 100Ah Tropicalized LiFePO4 Battery Pack",
     category: "batteries",
     price: 18500,
@@ -29,6 +30,8 @@ const PRODUCTS = [
   },
   {
     id: "nissan-leaf-battery",
+    requiresQuote: true,
+    freeFixing: true,
     name: "40kWh Gen-2 Leaf High-Ambient Replacement Pack",
     category: "batteries",
     price: 52000,
@@ -79,6 +82,7 @@ const PRODUCTS = [
   },
   {
     id: "tropicalized-suspension",
+    freeFixing: true,
     name: "Reinforced Heavy-Duty Suspension Coil Spring (Pair)",
     category: "suspension",
     price: 2450,
@@ -129,6 +133,7 @@ const PRODUCTS = [
   },
   {
     id: "conversion-motor-kit",
+    requiresQuote: true,
     name: "3kW Brushless DC Motor & Controller Conversion Kit",
     category: "conversion",
     price: 7500,
@@ -154,6 +159,7 @@ const PRODUCTS = [
   },
   {
     id: "tropicalized-ac-compressor",
+    freeFixing: true,
     name: "Tropicalized Electric A/C Compressor (High-Efficiency)",
     category: "suspension",
     price: 4950,
@@ -384,18 +390,31 @@ function createProductCardHtml(product) {
       </div>
       
       <div style="margin-top:auto; padding-top:1.15rem; border-top:1px solid var(--color-border);">
+        ${product.freeFixing ? 
+          `<div style="background: rgba(5, 255, 133, 0.1); color: var(--color-primary-neon); border: 1px solid rgba(5,255,133,0.3); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.75rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+             Free Fixing Included
+           </div>` : ''}
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
           <span style="font-size:0.75rem; font-weight:800; color:var(--color-text-slate); text-transform:uppercase; letter-spacing:0.05em;">Price</span>
-          <div class="product-price">GH₵ ${product.price.toLocaleString()}</div>
+          ${product.requiresQuote 
+            ? `<div class="product-price" style="font-size:1.1rem; color:var(--color-accent-gold);">Price on Request</div>` 
+            : `<div class="product-price">GH₵ ${product.price.toLocaleString()}</div>`}
         </div>
         <div class="card-actions-row">
           <button class="btn-quick-view quick-view-btn" data-id="${product.id}" title="Quick View">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/></svg>
           </button>
-          <button class="btn-cart-add add-to-cart-btn" data-id="${product.id}">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
-            <span>Add to Cart</span>
-          </button>
+          ${product.requiresQuote
+            ? `<a href="https://wa.me/233000000000?text=${encodeURIComponent(`Hello, I'd like to request a quote for the ${product.name}. I understand it takes about 48 hours.`)}" target="_blank" class="btn-cart-add" style="text-decoration:none; justify-content:center; background:rgba(251,191,36,0.1); color:var(--color-accent-gold); border: 1px solid rgba(251,191,36,0.3);">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                 <span>Request Quote</span>
+               </a>`
+            : `<button class="btn-cart-add add-to-cart-btn" data-id="${product.id}">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                 <span>Add to Cart</span>
+               </button>`
+          }
         </div>
       </div>
     </div>
@@ -943,10 +962,25 @@ function openProductModal(productId) {
     });
   }
   
+  let freeFixingHtml = "";
+  if (product.freeFixing) {
+    freeFixingHtml = `<div style="background: rgba(5, 255, 133, 0.1); color: var(--color-primary-neon); border: 1px solid rgba(5,255,133,0.3); padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-top: 0.5rem; margin-bottom: 0.5rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      Free Fixing & Maintenance Included
+    </div>`;
+  }
+  
   document.getElementById("modal-image-slot").innerHTML = `<img src="${product.image}" alt="${product.name}" style="width:100%; height:100%; object-fit:cover; display:block;">`;
   document.getElementById("modal-category-slot").textContent = product.category;
-  document.getElementById("modal-title-slot").textContent = product.name;
-  document.getElementById("modal-price-slot").textContent = `GH₵ ${product.price.toLocaleString()}`;
+  document.getElementById("modal-title-slot").innerHTML = product.name + freeFixingHtml;
+  
+  const priceSlot = document.getElementById("modal-price-slot");
+  if (product.requiresQuote) {
+    priceSlot.innerHTML = `<span style="color:var(--color-accent-gold); font-size: 1.4rem;">Price on Request</span><div style="font-size:0.75rem; color:var(--color-text-slate); font-weight:normal; margin-top:0.25rem;">Approx. 48hr turnaround</div>`;
+  } else {
+    priceSlot.textContent = `GH₵ ${product.price.toLocaleString()}`;
+  }
+  
   document.getElementById("modal-desc-slot").textContent = product.description;
   document.getElementById("modal-warranty-slot").textContent = product.warranty;
   
@@ -1017,11 +1051,29 @@ function openProductModal(productId) {
   
   const cartBtn = document.getElementById("modal-add-to-cart");
   const newCartBtn = cartBtn.cloneNode(true);
+  
+  if (product.requiresQuote) {
+    newCartBtn.textContent = "Request Quote via WhatsApp";
+    newCartBtn.style.background = "rgba(251,191,36,0.1)";
+    newCartBtn.style.color = "var(--color-accent-gold)";
+    newCartBtn.style.border = "1px solid rgba(251,191,36,0.3)";
+    newCartBtn.addEventListener("click", () => {
+      const waUrl = `https://wa.me/233000000000?text=${encodeURIComponent(`Hello, I'd like to request a quote for the ${product.name}. I understand it takes about 48 hours.`)}`;
+      window.open(waUrl, "_blank");
+      closeModal();
+    });
+  } else {
+    newCartBtn.textContent = "Add to Cart";
+    newCartBtn.style.background = ""; // Reset
+    newCartBtn.style.color = "";
+    newCartBtn.style.border = "";
+    newCartBtn.addEventListener("click", () => {
+      addToCart(product.id);
+      closeModal();
+    });
+  }
+  
   cartBtn.parentNode.replaceChild(newCartBtn, cartBtn);
-  newCartBtn.addEventListener("click", () => {
-    addToCart(product.id);
-    closeModal();
-  });
   
   overlay.classList.add("active");
   document.body.style.overflow = "hidden";
