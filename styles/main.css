@@ -773,8 +773,47 @@ a.nav-cart-btn:hover {
 
 @media (max-width: 768px) {
   .products-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; /* Tighter gap for 2 columns */
+  }
+  
+  /* Shrink text and padding so 2 columns fit on small mobile screens */
+  .products-grid:not(.list-view) .product-info {
+    padding: 0.75rem;
+  }
+  .products-grid:not(.list-view) .product-name {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+  }
+  .products-grid:not(.list-view) .product-price {
+    font-size: 0.9rem !important;
+  }
+  .products-grid:not(.list-view) .compat-tag {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.3rem;
+  }
+  .products-grid:not(.list-view) .btn-cart-add {
+    padding: 0.5rem;
+    font-size: 0.6rem;
+  }
+  .products-grid:not(.list-view) .btn-cart-add svg {
+    width: 12px;
+    height: 12px;
+  }
+  .products-grid:not(.list-view) .btn-quick-view {
+    display: none; /* Hide quick view button to save space for add to cart */
+  }
+  .products-grid:not(.list-view) .product-rating {
+    margin-bottom: 0.5rem;
+  }
+  .products-grid:not(.list-view) .badge {
+    font-size: 0.55rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  .products-grid.list-view {
+    grid-template-columns: 1fr; /* List view stays 1 column */
   }
   
   .products-grid.list-view .product-card {
