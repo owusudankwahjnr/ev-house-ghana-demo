@@ -2830,7 +2830,7 @@ footer.global-footer {
 
   /* Global Spacing Reductions */
   .catalog-page-header {
-    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    padding: 2.5rem 0.75rem 2rem 0.75rem;
   }
   .catalog-page-header h1 {
     font-size: 1.8rem;
@@ -2840,7 +2840,7 @@ footer.global-footer {
   }
   
   .hero-section {
-    padding: 2rem 1.5rem;
+    padding: 2rem 0.75rem;
     min-height: auto;
   }
   .hero-content h1 {
@@ -2890,7 +2890,7 @@ footer.global-footer {
   }
   
   section {
-    padding: 3rem 1.5rem;
+    padding: 2.5rem 0.75rem;
   }
   
   /* Vehicle Matcher Mobile Responsiveness */
