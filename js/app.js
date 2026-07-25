@@ -398,7 +398,7 @@ function createProductCardHtml(product) {
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
           <span style="font-size:0.75rem; font-weight:800; color:var(--color-text-slate); text-transform:uppercase; letter-spacing:0.05em;">Price</span>
           ${product.requiresQuote 
-            ? `<div class="product-price" style="font-size:1.1rem; color:var(--color-accent-gold);">Price on Request</div>` 
+            ? `<div class="product-price" style="font-size:1.1rem; color:var(--color-accent-gold);">Request for Price</div>` 
             : `<div class="product-price">GH₵ ${product.price.toLocaleString()}</div>`}
         </div>
         <div class="card-actions-row">
@@ -406,10 +406,14 @@ function createProductCardHtml(product) {
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/></svg>
           </button>
           ${product.requiresQuote
-            ? `<a href="https://wa.me/233000000000?text=${encodeURIComponent(`Hello, I'd like to request a quote for the ${product.name}. I understand it takes about 48 hours.`)}" target="_blank" class="btn-cart-add" style="text-decoration:none; justify-content:center; background:rgba(251,191,36,0.1); color:var(--color-accent-gold); border: 1px solid rgba(251,191,36,0.3);">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                 <span>Request Quote</span>
-               </a>`
+            ? `<div style="display:flex; gap:0.5rem; flex-grow:2;">
+                 <a href="tel:+233000000000" class="btn-cart-add" style="flex:1; padding:0.5rem; text-decoration:none; justify-content:center; background:rgba(5, 255, 133, 0.1); color:var(--color-primary-neon); border: 1px solid rgba(5,255,133,0.3);" title="Call for Price">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                 </a>
+                 <a href="https://wa.me/233000000000?text=${encodeURIComponent(`Hello, I'd like to request a quote for the ${product.name}. I understand it takes about 48 hours.`)}" target="_blank" class="btn-cart-add" style="flex:1; padding:0.5rem; text-decoration:none; justify-content:center; background:rgba(37, 211, 102, 0.1); color:#25D366; border: 1px solid rgba(37,211,102,0.3);" title="WhatsApp">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                 </a>
+               </div>`
             : `<button class="btn-cart-add add-to-cart-btn" data-id="${product.id}">
                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
                  <span>Add to Cart</span>
@@ -976,7 +980,7 @@ function openProductModal(productId) {
   
   const priceSlot = document.getElementById("modal-price-slot");
   if (product.requiresQuote) {
-    priceSlot.innerHTML = `<span style="color:var(--color-accent-gold); font-size: 1.4rem;">Price on Request</span><div style="font-size:0.75rem; color:var(--color-text-slate); font-weight:normal; margin-top:0.25rem;">Approx. 48hr turnaround</div>`;
+    priceSlot.innerHTML = `<span style="color:var(--color-accent-gold); font-size: 1.4rem;">Request for Price</span><div style="font-size:0.75rem; color:var(--color-text-slate); font-weight:normal; margin-top:0.25rem;">Approx. 48hr turnaround</div>`;
   } else {
     priceSlot.textContent = `GH₵ ${product.price.toLocaleString()}`;
   }
@@ -1049,31 +1053,47 @@ function openProductModal(productId) {
     reviewsSlot.appendChild(item);
   });
   
-  const cartBtn = document.getElementById("modal-add-to-cart");
-  const newCartBtn = cartBtn.cloneNode(true);
+  const actionBar = document.querySelector(".modal-action-bar");
   
   if (product.requiresQuote) {
-    newCartBtn.textContent = "Request Quote via WhatsApp";
-    newCartBtn.style.background = "rgba(251,191,36,0.1)";
-    newCartBtn.style.color = "var(--color-accent-gold)";
-    newCartBtn.style.border = "1px solid rgba(251,191,36,0.3)";
-    newCartBtn.addEventListener("click", () => {
+    actionBar.innerHTML = `
+      <div style="display:flex; gap:0.5rem; flex-grow:1;">
+        <a href="tel:+233000000000" class="btn btn-primary" style="flex:1; display:flex; justify-content:center; align-items:center; background:rgba(5, 255, 133, 0.1); color:var(--color-primary-neon); border: 1px solid rgba(5,255,133,0.3); gap:0.5rem; text-decoration:none; padding:0;" id="modal-call-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call
+        </a>
+        <a href="#" class="btn btn-primary" style="flex:1; display:flex; justify-content:center; align-items:center; background:rgba(37, 211, 102, 0.1); color:#25D366; border: 1px solid rgba(37,211,102,0.3); gap:0.5rem; text-decoration:none; padding:0;" id="modal-wa-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+      <button class="btn btn-secondary" id="modal-cancel-btn">Close</button>
+    `;
+    document.getElementById("modal-wa-btn").addEventListener("click", (e) => {
+      e.preventDefault();
       const waUrl = `https://wa.me/233000000000?text=${encodeURIComponent(`Hello, I'd like to request a quote for the ${product.name}. I understand it takes about 48 hours.`)}`;
       window.open(waUrl, "_blank");
       closeModal();
     });
+    document.getElementById("modal-call-btn").addEventListener("click", () => {
+      closeModal();
+    });
+    document.getElementById("modal-cancel-btn").addEventListener("click", closeModal);
   } else {
-    newCartBtn.textContent = "Add to Cart";
-    newCartBtn.style.background = ""; // Reset
-    newCartBtn.style.color = "";
-    newCartBtn.style.border = "";
-    newCartBtn.addEventListener("click", () => {
+    actionBar.innerHTML = `
+      <button class="btn btn-primary" id="modal-add-to-cart" style="flex-grow: 1;">
+        Add to Cart
+      </button>
+      <button class="btn btn-secondary" id="modal-cancel-btn">
+        Close
+      </button>
+    `;
+    document.getElementById("modal-add-to-cart").addEventListener("click", () => {
       addToCart(product.id);
       closeModal();
     });
+    document.getElementById("modal-cancel-btn").addEventListener("click", closeModal);
   }
-  
-  cartBtn.parentNode.replaceChild(newCartBtn, cartBtn);
   
   overlay.classList.add("active");
   document.body.style.overflow = "hidden";
