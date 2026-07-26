@@ -773,79 +773,12 @@ a.nav-cart-btn:hover {
 
 @media (max-width: 768px) {
   .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem; /* Tight gap to maximize screen space */
-  }
-  
-  /* Reduce padding and text sizes heavily for maximum visibility in 2-column view */
-  .products-grid:not(.list-view) .product-info {
-    padding: 0.5rem; /* Reduced padding */
-  }
-  .products-grid:not(.list-view) .product-name {
-    font-size: 0.75rem;
-    line-height: 1.2;
-    margin-bottom: 0.2rem;
-  }
-  .products-grid:not(.list-view) .product-price {
-    font-size: 0.8rem !important;
-  }
-  .products-grid:not(.list-view) .compat-tag {
-    font-size: 0.5rem;
-    padding: 0.1rem 0.2rem;
-  }
-  .products-grid:not(.list-view) .btn-cart-add {
-    padding: 0.35rem;
-    font-size: 0.55rem;
-    gap: 0.25rem;
-  }
-  .products-grid:not(.list-view) .btn-cart-add svg {
-    width: 10px;
-    height: 10px;
-  }
-  .products-grid:not(.list-view) .btn-quick-view {
-    display: none; /* Hide quick view button to save space for add to cart */
-  }
-  
-  /* Stack the rating/stock row on very small screens */
-  .products-grid:not(.list-view) .rating-stock-row {
-    flex-direction: column;
-    align-items: flex-start !important;
-    gap: 0.25rem;
-    margin-bottom: 0.5rem !important;
-  }
-  
-  /* Stack the price row so 'Request for Price' doesn't squish */
-  .products-grid:not(.list-view) .price-row {
-    flex-direction: column;
-    align-items: flex-start !important;
-    gap: 0.15rem;
-    margin-bottom: 0.5rem !important;
-  }
-  
-  /* Shrink the free fixing badge heavily for mobile */
-  .products-grid:not(.list-view) .free-fixing-badge {
-    font-size: 0.5rem !important;
-    padding: 0.15rem 0.35rem !important;
-    margin-bottom: 0.5rem !important;
-    white-space: normal;
-    text-align: left;
-    line-height: 1.1;
-  }
-  .products-grid:not(.list-view) .free-fixing-badge svg {
-    width: 8px !important;
-    height: 8px !important;
-  }
-  
-  .products-grid:not(.list-view) .product-rating {
-    margin-bottom: 0.25rem;
-  }
-  .products-grid:not(.list-view) .badge {
-    font-size: 0.55rem;
-    padding: 0.2rem 0.4rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .products-grid.list-view {
-    grid-template-columns: 1fr; /* List view stays 1 column */
+    grid-template-columns: 1fr;
   }
   
   .products-grid.list-view .product-card {
