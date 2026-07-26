@@ -404,7 +404,7 @@ function initLandingPage() {
   // Init CompuGhana e-commerce widgets
   setupPromoSlider();
   setupFeaturedTabs();
-  setupFlashDealsTimer();
+
   setupSavingsCalculator();
 }
 
@@ -588,36 +588,7 @@ function setupFeaturedTabs() {
   renderFeatured("all");
 }
 
-// FLASH DEALS COUNTDOWN TIMER
-function setupFlashDealsTimer() {
-  const timerTag = document.getElementById("flash-timer");
-  if (!timerTag) return;
-  
-  let hours = 4;
-  let minutes = 12;
-  let seconds = 35;
-  
-  setInterval(() => {
-    seconds--;
-    if (seconds < 0) {
-      seconds = 59;
-      minutes--;
-      if (minutes < 0) {
-        minutes = 59;
-        hours--;
-        if (hours < 0) {
-          hours = 23;
-        }
-      }
-    }
-    
-    const hStr = hours.toString().padStart(2, "0");
-    const mStr = minutes.toString().padStart(2, "0");
-    const sStr = seconds.toString().padStart(2, "0");
-    
-    timerTag.textContent = `${hStr}:${mStr}:${sStr}`;
-  }, 1000);
-}
+
 
 // CATALOG PAGE INITIALIZER
 function initCatalogPage() {
